@@ -1,0 +1,27 @@
+root{
+--primary-color: #000;
+}
+body{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #d36565, #d54848);
+}
+.wrapper{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.my-list-h1{
+    font-size: 4rem;
+}
+
+.phone{
+    width: 450px;
+    height:850px;
+    border-radius: 50px;
+}
+
+
+
+
