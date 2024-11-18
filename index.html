@@ -8,12 +8,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
     <div class="wrapper d-flex align-items-center justify-content-center">
-        <!-- <h1 class="my-list-h1 text-white p-5">My Contact List</h1> -->
+
+
         <!-- phone -->
         <div class="phone bg-dark border border-5 border-black overflow-hidden">
 
@@ -35,18 +38,100 @@
             </div>
 
             <!-- Lock Screen -->
-            
+
+            <main class="lock-screen screen d-flex justify-content-center align-items-end p-5">
+
+                <div class="slider-container ">
+
+                    <label for="customRange2" class="label text-center">Slide to unlock</label>
+                    <input type="range" class="slider"  id="slider" value="0" min="0" max="100" id="customRange2">
+
+                </div>
+             
+            </main>
+
 
             <!-- Home Screen -->
-            <main class="home-screen">
+            <main class="home-screen screen text-white text-center">
+                
+                <i class="contact-icon bi bi-person-lines-fill  "></i><p>Contact</p>
                 
             </main>
 
             <!-- Contact Screen -->
-            <!-- <main class="contact-screen">
+            <main class="contact-screen screen ">
+
+                <h1 class="Contact-list-h1 m-4">Contacts</h1>
+                
+                <!-- search Bar -->
+                <div class="search-bar m-4">
+
+                    <input class="search-input form-control rounded-5 p-3" type="search" placeholder="Search contact " aria-label="Search">
+
+                   <i class="search-icon bi bi-search "></i>
+                </div>
+                <!-- Contacts -->
+                <div class="container">
+                    <div class="contact-count text-white fs-4">
+                        50 Contacts
+                    </div>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+                                <img src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" class="user-img ">
+
+
+                                <div class="user-intro d-flex flex-column mx-5">
+
+                                    <div class="user-first-name fs-2">Shubik</div>
+                                    <div class = user-address-abb>Sydney</div>
+
+                                </div>
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <div class="user-details d-flex flex-column justify-content-center align-items-center">
+
+                                    <div class="user-full-name">
+                                        <i class="bi bi-person"></i></i>Shubik Bhatt
+                                    </div> 
+
+
+                                    <div class="user-phone-number">
+                                        <a href="tel:0123456789">
+                                            <i class="bi bi-telephone m-2"></i>0123456789
+                                        </a> 
+                                    </div> 
+
+                                    <div class="user-email">
+                                        <a href="mailto:prashrijan@gmail.com">
+                                            <i class="bi bi-envelope m-2"></i>prashrijan@gmail.com
+                                        </a>
+                                    </div>
+
+                                    <div class="user-full-address">
+                                        <i class="bi bi-geo-alt"></i>Homebush, Sydney, Australia
+                                    </div>
+
+
+                                </div>
+                              <!-- details here -->
+                            </div>
+                          </div>
+                        </div>   
+
+
+
+                </div>
+
 
             </main>
- -->
+
         </div>
     </div>
 
