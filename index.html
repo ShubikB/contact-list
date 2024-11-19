@@ -1,143 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Contact List</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <body>
+    <div class="wrapper d-flex justify-content-center align-items-center min-vh-100">
+      <div class="phone bg-dark rounded-5 border border-5 border-black text-white overflow-y-scroll">
+        <!-- notification -->
+        <div id="notification" class="notification d-flex justify-content-between p-2">
+          <div class="time-now">10:10</div>
+          <div style="width: 85px" class="bg-dark rounded-pill"></div>
 
-</head>
-<body>
-    <div class="wrapper d-flex align-items-center justify-content-center">
-
-
-        <!-- phone -->
-        <div class="phone bg-dark border border-5 border-black overflow-hidden">
-
-            <!-- status bar -->
-            <div class="status-bar text-white d-flex justify-content-between align-items-center p-3 bg-black ">
-                <!-- notification icons-->
-                <div class="notification d-flex gap-2 align-items-center">
-                    <div class="time-now">11:11</div>
-
-                </div>
-                <!-- system info  icons-->
-                <div class="system-info d-flex gap-2 align-items-center">
-                <i class="fa-solid fa-wifi"></i>
-                <i class="fa-solid fa-battery"></i>
-                <i class="fa-solid fa-signal"> 5G</i> 
-                </div> 
-
-
-            </div>
-
-            <!-- Lock Screen -->
-
-            <main class="lock-screen screen d-flex justify-content-center align-items-end p-5">
-
-                <div class="slider-container ">
-
-                    <label for="customRange2" class="label text-center">Slide to unlock</label>
-                    <input type="range" class="slider"  id="slider" value="0" min="0" max="100" id="customRange2">
-
-                </div>
-             
-            </main>
-
-
-            <!-- Home Screen -->
-            <main class="home-screen screen text-white text-center">
-                
-                <i class="contact-icon bi bi-person-lines-fill  "></i><p>Contact</p>
-                
-            </main>
-
-            <!-- Contact Screen -->
-            <main class="contact-screen screen ">
-
-                <h1 class="Contact-list-h1 m-4">Contacts</h1>
-                
-                <!-- search Bar -->
-                <div class="search-bar m-4">
-
-                    <input class="search-input form-control rounded-5 p-3" type="search" placeholder="Search contact " aria-label="Search">
-
-                   <i class="search-icon bi bi-search "></i>
-                </div>
-                <!-- Contacts -->
-                <div class="container">
-                    <div class="contact-count text-white fs-4">
-                        50 Contacts
-                    </div>
-
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-
-                                <img src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" class="user-img ">
-
-
-                                <div class="user-intro d-flex flex-column mx-5">
-
-                                    <div class="user-first-name fs-2">Shubik</div>
-                                    <div class = user-address-abb>Sydney</div>
-
-                                </div>
-                            </button>
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                <div class="user-details d-flex flex-column justify-content-center align-items-center">
-
-                                    <div class="user-full-name">
-                                        <i class="bi bi-person"></i></i>Shubik Bhatt
-                                    </div> 
-
-
-                                    <div class="user-phone-number">
-                                        <a href="tel:0123456789">
-                                            <i class="bi bi-telephone m-2"></i>0123456789
-                                        </a> 
-                                    </div> 
-
-                                    <div class="user-email">
-                                        <a href="mailto:prashrijan@gmail.com">
-                                            <i class="bi bi-envelope m-2"></i>prashrijan@gmail.com
-                                        </a>
-                                    </div>
-
-                                    <div class="user-full-address">
-                                        <i class="bi bi-geo-alt"></i>Homebush, Sydney, Australia
-                                    </div>
-
-
-                                </div>
-                              <!-- details here -->
-                            </div>
-                          </div>
-                        </div>   
-
-
-
-                </div>
-
-
-            </main>
-
+          <div>
+            <i class="bi bi-wifi-2"></i>
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-battery-half"></i>
+          </div>
         </div>
+
+        <!-- 
+        LOCK SCREEN
+        -->
+        <main id="lockScreen" class="screen d-flex flex-column justify-content-between">
+          <!-- LOCK SCREEN CLOCK -->
+          <div class="lock-Screen-clock time-now flex-center">10:10</div>
+
+          <!-- SLIDE TO UNLOCK -->
+          <div class="slider-container p-3 rounded-4 m-2 position-relative d-flex">
+            <label class="slider-label text-white position-absolute">Slide to Unlock</label>
+            <input type="range" id="slider" class="slider w-100" min="0" max="100" value="0" />
+          </div>
+
+          <!-- LOCK SCREEN SHORTCUTS -->
+          <div class="lock-screen-shortcuts d-flex justify-content-between">
+            <i class="bi bi-phone-vibrate-fill p-4 fs-3"></i>
+            <i class="bi bi-camera-fill p-4 fs-3"></i>
+          </div>
+        </main>
+
+        <!-- 
+        APP SCREEN
+        -->
+        <main id="appScreen" class="screen h-100">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="bg-white p-3 rounded-3 text-danger mt-4">
+              <i class="bi bi-person-bounding-box fs-1" onclick="displayContactListScreen()"></i>
+            </div>
+            <span>Contact</span>
+          </div>
+        </main>
+
+        <!--
+         CONTACT SCREEN 
+         -->
+        <main id="contactListScreen" class="screen">
+          <!-- header -->
+          <div class="p-3 text-light shadow">
+            <h1 class="fw-bolder">Contacts</h1>
+          </div>
+
+          <!-- search form -->
+          <div class="p-2 position-relative">
+            <input type="text" id="search" class="form-control rounded-pill" placeholder="Search Contact" />
+            <i class="searchIcon bi bi-search-heart-fill position-absolute text-dark fs-2"></i>
+          </div>
+
+          <!-- spinner -->
+          <div id="spinner" class="text-center">
+            <div class="spinner-border text-danger" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <!-- contact list -->
+          <div id="contact-list" class="bg-light text-dark">
+            <div class="p-3"><span id="userCount">10</span> Count</div>
+            <div class="accordion" id="contactAccordian">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="" width="50px" height="50px" class="rounded-circle" />
+                    <div class="ms-2">
+                      <div class="fw-bolder">USER NAME</div>
+                      <small>STREET NAME</small>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#contactAccordian">
+                  <div class="accordion-body d-flex justify-content-center flex-column align-items-center">
+                    <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="" width="100px" height="100px" class="rounded-circle" />
+
+                    <div class="d-flex flex-column">
+                      <div class="user-phone-number">
+                        <a href="tel:0123456789"> <i class="bi bi-telephone m-2"></i>0123456789 </a>
+                      </div>
+
+                      <div class="user-email">
+                        <a href="mailto:prashrijan@gmail.com"> <i class="bi bi-envelope m-2"></i>shubik@gmail.com </a>
+                      </div>
+
+                      <div class="user-full-address"><i class="bi bi-geo-alt"></i>Homebush, Sydney, Australia</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-
-
-    <script src="script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
 </html>

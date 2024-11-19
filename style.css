@@ -1,98 +1,93 @@
-root{
---primary-color: #000;
-}
-body{
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #d36565, #d54848);
-}
-.wrapper{
-    min-width: 100vw;
-    min-height: 100vh;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.my-list-h1{
-    font-size: 4rem;
+.wrapper {
+  /* background: url("./bg.jpg") no-repeat center; */
+  background: linear-gradient(to right, rgba(200, 30, 100), rgba(100, 30, 200));
+  background-size: cover;
 }
 
-.phone{
-    width: 450px;
-    height:850px;
-    border-radius: 50px;
+#appScreen {
+  display: none;
 }
 
-.lock-screen{
-    height: 100%;
-
-}
-.slider-container{
-    width: 95%;
-    height: 100px;
-    background-color: #fff;
-    border-radius: 50px;
-    position: relative;   
-    transform: translateY(-150px);
+#contactListScreen {
+  display: none;
 }
 
+.phone {
+  background: url(https://images.pexels.com/photos/24531988/pexels-photo-24531988/free-photo-of-historical-deutsche-orient-bank-building-in-istanbul-turkey.jpeg)
+    no-repeat center;
+  background-size: cover;
+}
 
-.label{
-    position: absolute;
-    top: 40%;
-    left: 35%;
+.phone {
+  width: 300px;
+  height: 600px;
+}
+
+.phone::-webkit-scrollbar {
+  display: none;
+}
+
+#notification {
+  background-color: rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+
+  height: 45px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#lockScreen {
+  height: 100%;
+  transform: translatey(-45px);
+}
+.lock-Screen-clock {
+  height: 250px;
+  font-size: 6rem;
+  font-weight: bolder;
+}
+
+.slider-container {
+  top: 75px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
 }
 
 .slider {
-    appearance: none;
-    background-color: transparent;
-    position: absolute;
-    width: 90%;
-    top:25%;
-    left: 5%;
+  appearance: none;
+  z-index: 99;
+  background-color: transparent;
 }
 
 .slider::-webkit-slider-thumb {
-    appearance: none; 
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%; 
-    cursor: pointer;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(rgb(191, 36, 199), rgb(57, 75, 231));
+
+  border-radius: 80%;
+  background-size: cover;
 }
 
-.home-screen{
-    height: 100%;
-    width: 100%;
-}
-.contact-icon{
-    font-size: 5rem;
-    padding:-10px;
-    color:#5eeeee
-
-}
-.search-btn{
-    appearance: none;
-    background-color: transparent;
+.slider-label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
-.Contact-list-h1{
-    color:#5eeeee;
-    font-size:4rem
-}
-.search-bar{
-    position: relative;
-}
-.search-icon{
-    position: absolute;
-    top: 25%;
-    left:90%;
+#appScreen {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
 }
 
-.user-img{
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-
+.searchIcon {
+  top: 3px;
+  right: 12px;
 }
