@@ -1,61 +1,44 @@
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  font-size: 20px;
 }
 
 .wrapper {
-  /* background: url("./bg.jpg") no-repeat center; */
   background: linear-gradient(to right, rgba(200, 30, 100), rgba(100, 30, 200));
   background-size: cover;
 }
 
-/* #appScreen {
+.phone {
+  background: url(https://images.pexels.com/photos/24531988/pexels-photo-24531988/free-photo-of-historical-deutsche-orient-bank-building-in-istanbul-turkey.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.phone {
+  width: 420px;
+  height: 900px;
+  border-radius: 50px;
+}
+#appScreen {
   display: none;
-} */
+}
 
 #contactListScreen {
   display: none;
 }
-
-.phone {
-  background: url(https://images.pexels.com/photos/24531988/pexels-photo-24531988/free-photo-of-historical-deutsche-orient-bank-building-in-istanbul-turkey.jpeg)
-    no-repeat center;
-  background-size: cover;
-}
-
-.phone {
-  width: 300px;
-  height: 600px;
-}
-
 .phone::-webkit-scrollbar {
   display: none;
 }
 
-#notification {
-  background-color: rgb(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-
-  height: 45px;
+.notification {
+  background-color: rgba(0, 0, 0, 0.1);
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 999;
 }
 
-#lockScreen {
-  height: 100%;
-  transform: translatey(-45px);
-}
-.lock-Screen-clock {
-  height: 250px;
-  font-size: 6rem;
-  font-weight: bolder;
-}
-
-.slider-container {
-  top: 75px;
-  background-color: rgba(0, 0, 0, 0.2);
+.sliderContainer {
+  top: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
 }
 
@@ -69,9 +52,10 @@
   appearance: none;
   width: 40px;
   height: 40px;
-  background: radial-gradient(rgb(191, 36, 199), rgb(57, 75, 231));
+  background: radial-gradient(rgb(36, 80, 199), rgb(12, 30, 189));
 
-  border-radius: 80%;
+  border-radius: 50%;
+  background: url("./right.gif") no-repeat center;
   background-size: cover;
 }
 
@@ -79,15 +63,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   pointer-events: none;
 }
 
 #appScreen {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0 0.1);
   backdrop-filter: blur(10px);
 }
 
 .searchIcon {
   top: 3px;
   right: 12px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.lockScreenTime {
+  font-size: 8rem;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

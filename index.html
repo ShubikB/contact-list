@@ -22,13 +22,13 @@
   <body>
     <div class="wrapper d-flex justify-content-center align-items-center min-vh-100">
       <div
-        class="phone bg-dark rounded-5 border border-5 border-black text-white overflow-y-scroll"
+        class="phone bg-dark border border-5 border-black shadow-lg text-white overflow-y-scroll"
+        ondblclick="displayLockScreen()"
       >
         <!-- notification -->
-        <div id="notification" class="notification d-flex justify-content-between p-2">
+        <div id="notification" class="notification d-flex justify-content-between px-4 py-2">
           <div class="time-now">10:10</div>
-          <div style="width: 85px" class="bg-dark rounded-pill"></div>
-
+          <div style="width: 95px" class="bg-dark rounded-pill"></div>
           <div>
             <i class="bi bi-wifi-2"></i>
             <i class="bi bi-reception-4"></i>
@@ -36,42 +36,34 @@
           </div>
         </div>
 
-        <!-- 
-        LOCK SCREEN
-        -->
-        <main id="lockScreen" class="screen d-flex flex-column justify-content-between">
-          <!-- LOCK SCREEN CLOCK -->
-          <div class="lock-Screen-clock time-now flex-center">10:10</div>
-
-          <!-- SLIDE TO UNLOCK -->
-          <div class="slider-container p-3 rounded-4 m-2 position-relative d-flex">
-            <label class="slider-label text-white position-absolute">Slide to Unlock</label>
-            <input type="range" id="slider" class="slider w-100" min="0" max="100" value="20" />
-          </div>
-
-          <!-- LOCK SCREEN SHORTCUTS -->
-          <div class="lock-screen-shortcuts d-flex justify-content-between">
-            <i class="bi bi-phone-vibrate-fill p-4 fs-3"></i>
-            <i class="bi bi-camera-fill p-4 fs-3"></i>
+        <!-- Lock Screen -->
+        <main id="lockScreen" class="screen">
+          <div class="postition-relative d-flex flex-column">
+            <div class="w-100 text-center mt-5">
+              <div class="lockScreenTime clockTime">10:10</div>
+            </div>
+            <div class="sliderContainer p-3 rounded-4 m-2 position-relative d-flex">
+              <label class="slider-label text-secondary position-absolute">Slide to Unlock</label>
+              <input type="range" id="slider" class="slider w-100" min="0" max="100" value="0" />
+            </div>
           </div>
         </main>
 
-        <!-- 
-        APP SCREEN
-        -->
+        <!-- App screen -->
         <main id="appScreen" class="screen h-100">
           <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="bg-white p-3 rounded-3 text-danger mt-4">
-              <i class="bi bi-person-bounding-box fs-1" onclick="displayContactListScreen()"></i>
+              <i
+                class="bi bi-person-bounding-box fs-1 icon"
+                onclick="displayContactListScreen()"
+              ></i>
             </div>
             <span>Contact</span>
           </div>
         </main>
 
-        <!--
-         CONTACT SCREEN 
-         -->
-        <main id="contactScreen" class="screen">
+        <!-- Contact list screen -->
+        <main id="contactListScreen" class="screen">
           <!-- header -->
           <div class="p-3 text-light shadow">
             <h1 class="fw-bolder">Contacts</h1>
@@ -97,7 +89,7 @@
 
           <!-- contact list -->
           <div id="contact-list" class="bg-light text-dark">
-            <div class="p-3"><span id="userCount">10</span> Count</div>
+            <div class="p-3"><span id="userCount">10</span> Contacts</div>
             <div class="accordion" id="contactAccordian">
               <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -139,18 +131,22 @@
                     />
 
                     <div class="d-flex flex-column">
-                      <div class="user-phone-number">
-                        <a href="tel:0123456789"> <i class="bi bi-telephone m-2"></i>0123456789 </a>
+                      <div>
+                        <i class="bi bi-person-circle"></i>
+                        <span>User Name</span>
                       </div>
+                      <div>
+                        <i class="bi bi-phone-fill"></i>
 
-                      <div class="user-email">
-                        <a href="mailto:prashrijan@gmail.com">
-                          <i class="bi bi-envelope m-2"></i>shubik@gmail.com
-                        </a>
+                        <span>40000000</span>
                       </div>
-
-                      <div class="user-full-address">
-                        <i class="bi bi-geo-alt"></i>Homebush, Sydney, Australia
+                      <div>
+                        <i class="bi bi-envelope-at-fill"></i>
+                        <span>random@gmail.com</span>
+                      </div>
+                      <div>
+                        <i class="bi bi-globe-americas"></i>
+                        <span>FULL ADDRESS</span>
                       </div>
                     </div>
                   </div>
