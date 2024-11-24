@@ -160,9 +160,8 @@ const displayScreen = (screenName) => {
 }
 
 // display contact count
-// populate the contact list in the accordian
 const displayContactList = (userList) => {
-  // updat the user count
+  // update the contact List Number
   const userNumber = userList.length
   const userCountElement = document.getElementById("userCount")
 
@@ -173,7 +172,6 @@ const displayContactList = (userList) => {
   cA.innerHTML = ""
 
   userList.map((item, index) => {
-    // console.log(item);
     const accItem = `
     <div class="accordion-item">
               <h2 class="accordion-header">
@@ -248,6 +246,7 @@ const displayContactListScreen = async () => {
   contactListElement.style.display = "none"
 
   // fetch contact data
+
   const response = await fetch(apiURL)
   console.log(response)
   const data = await response.json()
